@@ -17,6 +17,7 @@
 		6416D3052492706600DDF197 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416D3042492706600DDF197 /* main.m */; };
 		6416D30F2492706600DDF197 /* LocationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416D30E2492706600DDF197 /* LocationDemoTests.m */; };
 		6416D31A2492706600DDF197 /* LocationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416D3192492706600DDF197 /* LocationDemoUITests.m */; };
+		6416D32924927A1C00DDF197 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6416D32824927A1C00DDF197 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		6416D3152492706600DDF197 /* LocationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6416D3192492706600DDF197 /* LocationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDemoUITests.m; sourceTree = "<group>"; };
 		6416D31B2492706600DDF197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6416D32824927A1C00DDF197 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6416D32924927A1C00DDF197 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +93,7 @@
 				6416D30D2492706600DDF197 /* LocationDemoTests */,
 				6416D3182492706600DDF197 /* LocationDemoUITests */,
 				6416D2ED2492706300DDF197 /* Products */,
+				6416D32724927A1C00DDF197 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +142,14 @@
 				6416D31B2492706600DDF197 /* Info.plist */,
 			);
 			path = LocationDemoUITests;
+			sourceTree = "<group>";
+		};
+		6416D32724927A1C00DDF197 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6416D32824927A1C00DDF197 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,15 +8,48 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () 
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+  
+    locationManager = [[CLLocationManager alloc] init];
+    
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = 5.0;
+   
+    [locationManager requestWhenInUseAuthorization];
+    
+    if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse){
+       
+        [locationManager startUpdatingLocation];
+        
+    }
+    
+    
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
+    
+    if(status == kCLAuthorizationStatusAuthorizedWhenInUse){
+        [locationManager startUpdatingLocation];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    
+    float latitude = locations.firstObject.coordinate.latitude;
+    float longitude = locations.firstObject.coordinate.longitude;
+    
+    NSLog(@"%f",latitude);
+    NSLog(@"%f",longitude);
 }
 
 
